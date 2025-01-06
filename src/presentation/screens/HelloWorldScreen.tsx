@@ -1,9 +1,17 @@
 import {StyleSheet, Text, View} from 'react-native';
 
-export const HelloWordScreen = () => {
+interface Props {
+    name?: string;
+
+}
+
+export const HelloWordScreen = ({name='World'} : Props) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Hello Word Screen</Text>
+      <Text 
+        numberOfLines={1}
+        
+        style={styles.title}>Hello {name}</Text>
     </View>
   );
 };
